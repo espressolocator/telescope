@@ -17,7 +17,7 @@ telescope:daily # singleday
 telescope:datetimepicker
 telescope:debug
 telescope:email
-telescope:embedly
+#telescope:embedly
 telescope:getting-started
 telescope:invites
 telescope:kadira
