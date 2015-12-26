@@ -14,9 +14,7 @@
             <div class="posts posts-list">
               {{> post_item post=this}}
             </div>
-            {{#if body}}
-              {{> post_body}}
-            {{/if}}
+            {{> post_body}}
             {{> comment_submit}}
             {{> comment_list}}
           </div>
