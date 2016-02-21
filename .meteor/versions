@@ -147,7 +147,6 @@ telescope:api@0.25.7
 telescope:cloudinary@0.25.7
 telescope:comments@0.25.7
 telescope:core@0.25.7
-telescope:daily@0.25.7
 telescope:datetimepicker@0.25.7
 telescope:debug@0.25.7
 telescope:email@0.25.7

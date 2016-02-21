@@ -13,7 +13,7 @@ telescope:core
 
 telescope:migrations
 telescope:api
-telescope:daily # singleday
+#telescope:daily # singleday
 telescope:datetimepicker
 telescope:debug
 telescope:email
