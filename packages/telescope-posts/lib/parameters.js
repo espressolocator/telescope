@@ -26,13 +26,15 @@ Posts.parameters.get = function (terms) {
   parameters = Telescope.callbacks.run("postsParameters", parameters, terms);
   
   // if sort options are not provided, default to "top" sort
-  if (_.isEmpty(parameters.options.sort)) {
+  if (_.isUndefined(parameters.options.sort)) {
     parameters.options.sort = {sticky: -1, score: -1};
   }
  
   // extend sort to sort posts by _id to break ties
   // NOTE: always do this last to avoid _id sort overriding another sort
-  parameters = Telescope.utils.deepExtend(true, parameters, {options: {sort: {_id: -1}}});
+  if (!_.isEmpty(parameters.options.sort)) {
+    parameters = Telescope.utils.deepExtend(true, parameters, {options: {sort: {_id: -1}}});
+  }
 
   // console.log(parameters);
 
