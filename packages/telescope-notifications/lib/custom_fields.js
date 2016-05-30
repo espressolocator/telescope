@@ -43,7 +43,7 @@ Users.addField([
   {
     fieldName: 'telescope.notifications.posts',
     fieldSchema: {
-      label: 'New posts',
+      label: _.partial(i18n.t, "new_posts"),
       type: Boolean,
       optional: true,
       defaultValue: false,
@@ -56,7 +56,7 @@ Users.addField([
   {
     fieldName: 'telescope.notifications.comments',
     fieldSchema: {
-      label: 'Comments on my posts',
+      label: _.partial(i18n.t, "comments_on_my_posts"),
       type: Boolean,
       optional: true,
       defaultValue: true,
