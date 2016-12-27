@@ -62,7 +62,7 @@ AutoForm.hooks({
 
     onError: function(formType, error) {
       console.log(error);
-      Messages.flash(error.reason.split('|')[0], "error"); // workaround because error.details returns undefined
+      Messages.flash(error.message.split('|')[0], "error"); // workaround because error.details returns undefined
       Messages.clearSeen();
     }
 
