@@ -18,9 +18,9 @@ telescope:datetimepicker
 telescope:debug
 telescope:email
 #telescope:embedly
-telescope:getting-started
+#telescope:getting-started
 telescope:invites
-telescope:kadira
+#telescope:kadira
 telescope:newsletter
 telescope:notifications
 telescope:pages
