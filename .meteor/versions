@@ -74,7 +74,7 @@ jquery@1.11.4
 kabalin:autoform-geojson-point@0.0.1
 kabalin:googlemaps-js-info-bubble@0.0.1
 kabalin:simple-schema-geojson@0.0.1
-kabalin:telescope-espressolocator@0.0.1
+kabalin:telescope-espressolocator@1.0.0-beta
 kadira:blaze-layout@2.3.0
 kadira:debug@2.2.4
 kadira:dochead@1.4.0
