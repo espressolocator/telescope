@@ -34,7 +34,6 @@ $small-break: 600px;
   z-index: 10000;
   background: rgba(0,0,0,0.4);
   border-radius: 3px;
-  width: 185px;
   padding: 10px;
   line-height: 1;
   @include small {
@@ -43,8 +42,8 @@ $small-break: 600px;
     margin-left: -92px;
   }
   @include medium-large {
-    left: -200px;
-    top: -8px;
+    left: -110px;
+    top: -10px;
   }
   .icon {
     color: white;

@@ -3,9 +3,6 @@ Meteor.startup(function () {
     encodedTitle: function () {
       return encodeURIComponent(this.title);
     },
-    sourceLink: function () {
-      return Posts.getPageUrl(this);
-    },
     viaTwitter: function () {
       return !!Settings.get('twitterAccount') ? 'via='+Settings.get('twitterAccount') : '';
     }
