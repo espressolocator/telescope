@@ -4,7 +4,7 @@ Meteor.startup(function () {
       return encodeURIComponent(this.title);
     },
     sourceLink: function () {
-      return !!this.url ? this.url : Posts.getPageUrl(this);
+      return Posts.getPageUrl(this);
     },
     viaTwitter: function () {
       return !!Settings.get('twitterAccount') ? 'via='+Settings.get('twitterAccount') : '';
