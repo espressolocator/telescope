@@ -406,6 +406,7 @@
 		border: 1px solid $lightest-grey;
 		span{
 			border-right: 1px solid $lightest-grey;
+                        white-space: nowrap;
 		}
 	}
 }
