@@ -57,6 +57,8 @@ facebook@1.2.2
 fastclick@1.0.7
 fortawesome:fontawesome@4.5.0
 fourseven:scss@3.4.1
+gadicohen:robots-txt@0.0.10
+gadicohen:sitemaps@0.0.26
 geojson-utils@1.0.4
 handlebars@1.0.4
 hausor:autoform-bs-minicolors@1.0.0
@@ -166,6 +168,7 @@ telescope:scoring@0.25.7
 telescope:search@0.25.7
 telescope:settings@0.25.7
 telescope:share@0.25.7
+telescope:sitemap@0.25.7
 telescope:spiderable@0.25.7
 telescope:subscribe-to-posts@0.25.7
 telescope:tagline-banner@0.25.7

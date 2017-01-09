@@ -18,7 +18,6 @@ Meteor.startup(function() {
 
     // Posts list pages
     var paths = [
-      {page: "/", lastmod: _getLatest(Settings.get("defaultView", "top")), changefreq: "hourly"},
       {page: "/top", lastmod: _getLatest("top"), changefreq: "hourly"},
       {page: "/new", lastmod: _getLatest("new"), changefreq: "hourly"},
       {page: "/best", lastmod: _getLatest("best"), changefreq: "daily"}
@@ -50,7 +49,7 @@ Meteor.startup(function() {
         sort: params.options.sort
       });
       posts.forEach(function(post) {
-        postPages[post.url] = {page: post.getPageUrl(), lastmod: post.postedAt, changefreq: "daily"};
+        postPages[post._id] = {page: post.getPageUrl(), lastmod: post.postedAt, changefreq: "daily"};
       });
     });
 
