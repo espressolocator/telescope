@@ -4,22 +4,16 @@ serveAPI = function(terms){
   var parameters = Posts.parameters.get(terms);
 
   Posts.find(parameters.find, parameters.options).forEach(function(post) {
-    var url = Posts.getLink(post);
     var postOutput = {
       title: post.title,
-      headline: post.title, // for backwards compatibility
       author: post.author,
       date: post.postedAt,
-      url: url,
-      pageUrl: Posts.getPageUrl(post, true),
+      url: Posts.getPageUrl(post, true),
       guid: post._id
     };
 
     if(post.body)
       postOutput.body = post.body;
-
-    if(post.url)
-      postOutput.domain = Telescope.utils.getDomain(url);
 
     if (post.thumbnailUrl) {
       postOutput.thumbnailUrl = Telescope.utils.addHttp(post.thumbnailUrl);
