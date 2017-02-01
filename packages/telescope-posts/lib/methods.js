@@ -21,10 +21,6 @@ Posts.submit = function (post) {
   if(!post.title)
     throw new Meteor.Error(602, i18n.t('please_fill_in_a_title'));
 
-  // check that there are no posts with the same URL
-  if(!!post.url)
-    Posts.checkForSameUrl(post.url, user);
-
   // ------------------------------ Properties ------------------------------ //
 
   var defaultProperties = {
@@ -311,10 +307,5 @@ Meteor.methods({
 
     Telescope.callbacks.runAsync("postDeleteAsync", post);
 
-  },
-
-  checkForDuplicates: function (url) {
-    Posts.checkForSameUrl(url);  
   }
-
 });
