@@ -116,6 +116,7 @@ oauth2@1.1.5
 observe-sequence@1.0.7
 okgrow:router-autoscroll@0.1.6
 ongoworks:speakingurl@6.0.0
+ongoworks:spiderable@1.0.7
 ordered-dict@1.0.4
 package-version-parser@3.0.4
 percolatestudio:synced-cron@1.1.0
@@ -139,7 +140,6 @@ sha@1.0.4
 softwarerero:accounts-t9n@1.1.7
 spacebars@1.0.7
 spacebars-compiler@1.0.7
-spiderable@1.0.9
 srp@1.0.4
 standard-app-packages@1.0.6
 tap:i18n@1.7.0
