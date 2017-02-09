@@ -58,7 +58,7 @@ Package.onUse(function (api) {
     'ccan:cssreset@1.0.0',
     'djedi:sanitize-html@1.11.2',
     'dburles:collection-helpers@1.0.4',
-    'jparker:gravatar@0.4.1',
+    'jparker:gravatar@0.5.1',
     'sanjo:meteor-files-helpers@1.2.0_1',
     'cmather:handlebars-server@2.0.0',
     'chuangbo:cookie@1.1.0',
