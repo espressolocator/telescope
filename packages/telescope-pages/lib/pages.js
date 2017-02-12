@@ -41,7 +41,7 @@ Telescope.modules.add("primaryNav", {
 
 Telescope.modules.add("mobileNav", {
   template: 'pages_menu',
-  order: 5
+  order: 25
 });
 
 Meteor.startup(function () {
