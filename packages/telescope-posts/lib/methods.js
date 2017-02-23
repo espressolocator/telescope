@@ -297,7 +297,7 @@ Meteor.methods({
 
     var post = Posts.findOne({_id: postId});
 
-    if(!Meteor.userId() || !Users.can.editById(Meteor.userId(), post)) throw new Meteor.Error(606, 'You need permission to edit or delete a post');
+    if(!Meteor.userId() || !Users.can.removeById(Meteor.userId(), post)) throw new Meteor.Error(606, 'You need permission to edit or delete a post');
 
     // decrement post count
     Users.update({_id: post.userId}, {$inc: {"telescope.postCount": -1}});

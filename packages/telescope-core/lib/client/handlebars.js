@@ -35,6 +35,9 @@ Template.registerHelper('isAdmin', function(user) {
 Template.registerHelper('canEdit', function(item) {
   return Users.can.edit(Meteor.user(), item, false);
 });
+Template.registerHelper('canRemove', function(item) {
+  return Users.can.remove(Meteor.user(), item, false);
+});
 
 Template.registerHelper('log', function(context){
   console.log(context);

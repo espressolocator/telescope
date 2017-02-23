@@ -139,6 +139,30 @@ Users.can.editById = function (userId, document) {
 Users.helpers({canEditById: function (document) {return Users.can.editById(this, document);}});
 
 /**
+ * Check if a user can delete a document
+ * @param {Object} user - The user performing the action
+ * @param {Object} document - The document being deleted
+ */
+Users.can.remove = function (user, document) {
+  user = (typeof user === 'undefined') ? Meteor.user() : user;
+
+  if (!user || !document) {
+    return false;
+  }
+
+  var adminCheck = Users.is.admin(user);
+
+  return adminCheck;
+};
+Users.helpers({canRemove: function (document) {return Users.can.remove(this, document);}});
+
+Users.can.removeById = function (userId, document) {
+  var user = Meteor.users.findOne(userId);
+  return Users.can.remove(user, document);
+};
+Users.helpers({canRemoveById: function (document) {return Users.can.removeById(this, document);}});
+
+/**
  * Check if a user can submit a field
  * @param {Object} user - The user performing the action
  * @param {Object} field - The field being edited or inserted
