@@ -33,30 +33,29 @@ var doSEOStuff = function (post) {
   if (!!Settings.get("twitterAccount")) {
     DocHead.addMeta({property: "twitter:site", content: Settings.get("twitterAccount")});
   }
-  
 };
 
 Template.post_page.onCreated(function () {
 
   var template = this;
-  var postId = FlowRouter.getParam("_id");
 
   // initialize the reactive variables
   template.ready = new ReactiveVar(false);
 
-  var postSubscription = Telescope.subsManager.subscribe('singlePost', postId);
-  var postUsersSubscription = Telescope.subsManager.subscribe('postUsers', postId);
-  var commentSubscription = Telescope.subsManager.subscribe('commentsList', {view: 'postComments', postId: postId});
-  
   // Autorun 3: when subscription is ready, update the data helper's terms
   template.autorun(function () {
+    var postId = FlowRouter.getParam("_id"); // ⚡ reactive ⚡
+
+    template.ready.set(false);
+    var postSubscription = Telescope.subsManager.subscribe('singlePost', postId);
+    var postUsersSubscription = Telescope.subsManager.subscribe('postUsers', postId);
+    var commentSubscription = Telescope.subsManager.subscribe('commentsList', {view: 'postComments', postId: postId});
 
     var subscriptionsReady = postSubscription.ready(); // ⚡ reactive ⚡
-
     // if subscriptions are ready, set terms to subscriptionsTerms and update SEO stuff
     if (subscriptionsReady) {
       template.ready.set(true);
-      var post = Posts.findOne(FlowRouter.getParam("_id"));
+      var post = Posts.findOne(postId);
       if (post) {
         doSEOStuff(post);
       } else {
