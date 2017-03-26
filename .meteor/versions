@@ -143,7 +143,6 @@ srp@1.0.4
 standard-app-packages@1.0.6
 tap:i18n@1.7.0
 telescope:api@0.25.7
-telescope:cloudinary@0.25.7
 telescope:comments@0.25.7
 telescope:core@0.25.7
 telescope:datetimepicker@0.25.7
@@ -166,7 +165,6 @@ telescope:rss@0.25.7
 telescope:scoring@0.25.7
 telescope:search@0.25.7
 telescope:settings@0.25.7
-telescope:share@0.25.7
 telescope:sitemap@0.25.7
 telescope:spiderable@0.25.7
 telescope:subscribe-to-posts@0.25.7

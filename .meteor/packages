@@ -30,7 +30,7 @@ telescope:releases
 telescope:rss
 telescope:scoring
 telescope:search
-telescope:share
+# telescope:share
 # telescope:singleday
 telescope:sitemap
 telescope:spiderable
@@ -40,7 +40,7 @@ telescope:tags
 telescope:theme-base
 telescope:theme-hubble
 telescope:update-prompt
-telescope:cloudinary
+# telescope:cloudinary
 
 ############ Your Custom Packages ############
 
