@@ -30,12 +30,12 @@ var viewsMenuItems = [
     label: 'new',
     description: 'newest_posts'
   },
-//  {
-//    route: Posts.getRoute,
-//    name: 'best',
-//    label: 'best',
-//    description: 'highest_ranked_posts_ever'
-//  },
+  {
+    route: Posts.getRoute,
+    name: 'best',
+    label: 'best',
+    description: 'highest_ranked_posts_ever'
+  },
   {
     route: Posts.getRoute,
     name: 'pending',
