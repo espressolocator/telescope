@@ -12,7 +12,7 @@ Posts.getRoute = function () {
   } else {
     newQuery = _.extend(currentQuery, {view: viewName});
   }
-  
+
   return FlowRouter.path("postsDefault", FlowRouter.current().params, newQuery);
 };
 
@@ -22,19 +22,22 @@ var viewsMenuItems = [
     route: Posts.getRoute,
     name: 'top',
     label: 'top',
-    description: 'most_popular_posts'
+    description: 'most_popular_posts',
+    order: 4,
   },
   {
     route: Posts.getRoute,
     name: 'new',
     label: 'new',
-    description: 'newest_posts'
+    description: 'newest_posts',
+    order: 5,
   },
   {
     route: Posts.getRoute,
     name: 'best',
     label: 'best',
-    description: 'highest_ranked_posts_ever'
+    description: 'highest_ranked_posts_ever',
+    order: 3,
   },
   {
     route: Posts.getRoute,
