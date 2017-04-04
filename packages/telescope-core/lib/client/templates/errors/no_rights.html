@@ -1,9 +1,9 @@
 <template name="no_rights">
-  <div class="grid-small grid-block dialog no-rights">
+  <div class="grid-small grid-block dialog no-rights page-body">
     {{#if link}}
-      <a href="{{link}}">{{errorMessage}}</a>
+      <a href="{{link}}">{{{errorMessage}}}</a>
     {{else}}
-      {{errorMessage}}
+      {{{errorMessage}}}
     {{/if}}
   </div>
 </template>
