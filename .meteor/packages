@@ -24,7 +24,7 @@ telescope:invites
 telescope:newsletter
 telescope:notifications
 telescope:pages
-telescope:post-by-feed
+#telescope:post-by-feed
 telescope:prerender
 telescope:releases
 telescope:rss

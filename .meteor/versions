@@ -157,7 +157,6 @@ telescope:migrations@0.25.7
 telescope:newsletter@0.25.7
 telescope:notifications@0.25.7
 telescope:pages@0.25.7
-telescope:post-by-feed@0.25.7
 telescope:posts@0.25.7
 telescope:prerender@0.25.7
 telescope:releases@0.25.7
