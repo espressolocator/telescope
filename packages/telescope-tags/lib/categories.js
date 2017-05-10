@@ -29,6 +29,11 @@ Categories.schema = new SimpleSchema({
     optional: true,
     editableBy: ["admin"]
   },
+  disabled: {
+    type: Boolean,
+    optional: true,
+    editableBy: ["admin"]
+  },
   parentId: {
     type: String,
     optional: true,

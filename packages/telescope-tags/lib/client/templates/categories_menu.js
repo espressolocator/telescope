@@ -42,6 +42,11 @@ Meteor.startup(function () {
         // is this category active?
         var isActive = _.contains(activeCategories, category.slug);
 
+        var showCheckbox = true;
+        if (category.disabled) {
+          showCheckbox = false;
+        }
+
         return {
           route: getRoute,
           label: category.name+=" <span class=\"category-posts-count\">("+Counts.get(category.getCounterName())+")</span>",
@@ -50,6 +55,7 @@ Meteor.startup(function () {
           parentId: category.parentId,
           isExpanded: isExpanded,
           isActive: isActive,
+          showCheckbox: showCheckbox,
           itemClass: "category-"+category.slug,
           data: category
         };

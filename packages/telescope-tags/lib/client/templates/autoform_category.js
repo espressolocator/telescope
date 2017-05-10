@@ -26,6 +26,7 @@ Template.afCategory_bootstrap3.helpers({
         label: category.name,
         isSelected: isSelected,
         isExpanded: isSelected,
+        showCheckbox: !category.disabled,
         itemClass: "category-"+category.slug,
         data: category
       };

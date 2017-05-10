@@ -7,7 +7,10 @@
 <template name="category_input_item">
   <div class="menu-item-label category-input-item" id="{{item._id}}">
     <label>
-      <input class="category-checkbox" type="checkbox" value="{{item._id}}" {{atts}} /> {{{getItemLabel}}}
+      {{#if item.showCheckbox}}
+      <input class="category-checkbox" type="checkbox" value="{{item._id}}" {{atts}} />
+      {{/if}}
+      {{{getItemLabel}}}
     </label>
   </div>
   {{#if childMenuItems}}

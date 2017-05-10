@@ -8,7 +8,7 @@ Categories.getParents = function (category) {
 
   var getParents = function recurse (category) {
     var parent;
-    if (parent = Categories.findOne(category.parentId)) {
+    if (parent = Categories.findOne({ _id: category.parentId, disabled: false})) {
       categoriesArray.push(parent);
       recurse(parent);
     }
