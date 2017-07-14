@@ -19,13 +19,14 @@ Template.afCategory_bootstrap3.helpers({
 
     var menuItems = _.map(Categories.find({}, {sort: {order: 1, name: 1}}).fetch(), function (category) {
       var isSelected = _.contains(selectedCategoriesIds, category._id);
+      var isExpanded = _.intersection(selectedCategoriesIds, _.pluck(category.getChildren(), "_id")).length > 0;
       return {
         _id: category._id,
         parentId: category.parentId,
         template: "category_input_item",
         label: category.name,
         isSelected: isSelected,
-        isExpanded: isSelected,
+        isExpanded: isExpanded,
         showCheckbox: !category.disabled,
         itemClass: "category-"+category.slug,
         data: category
