@@ -43,6 +43,4 @@ telescope:update-prompt
 # telescope:cloudinary
 
 ############ Your Custom Packages ############
-
-# my-custom-package
-kabalin:telescope-espressolocator
+espressolocator:telescope-espressolocator

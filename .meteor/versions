@@ -53,6 +53,10 @@ ecmascript-runtime@0.2.6
 ejson@1.0.7
 email@1.0.8
 es5-shim@4.1.14
+espressolocator:autoform-geojson-point@0.0.1
+espressolocator:googlemaps-js-info-bubble@0.0.1
+espressolocator:simple-schema-geojson@0.0.1
+espressolocator:telescope-espressolocator@1.0.3-beta
 facebook@1.2.2
 fastclick@1.0.7
 fortawesome:fontawesome@4.5.0
@@ -72,10 +76,6 @@ jparker:crypto-core@0.1.0
 jparker:crypto-md5@0.1.1
 jparker:gravatar@0.5.1
 jquery@1.11.4
-kabalin:autoform-geojson-point@0.0.1
-kabalin:googlemaps-js-info-bubble@0.0.1
-kabalin:simple-schema-geojson@0.0.1
-kabalin:telescope-espressolocator@1.0.1-beta
 kadira:blaze-layout@2.3.0
 kadira:dochead@1.4.0
 kadira:flow-router@2.10.1
