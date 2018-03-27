@@ -1,4 +1,12 @@
-Telescope is an open-source, real-time social news site built with [Meteor](http://meteor.com)
+**This is a customised fork of TelescopeJS designed for using with
+[telescope-espressolocator](https://github.com/espressolocator/telescope-espressolocator)
+package to provide [espressolocator.com](https://espressolocator.com) web
+application for coffee lovers. TelescopeJS evolved into
+[VulcanJS](https://github.com/VulcanJS/Vulcan) framework since, but you
+still can find TelescopeJS code in its legacy branch.**
+
+Telescope is an open-source, real-time social news site built with
+[Meteor](http://meteor.com)
 
 **Note:** Telescope is beta software. Most of it should work but it's still a little unpolished and you'll probably find some bugs. Use at your own risk :)
 
