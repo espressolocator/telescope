@@ -23,10 +23,10 @@ var doSEOStuff = function (post) {
   }
 
   // Set image
-  if (!!post.thumbnailUrl) {
-    var image = Telescope.utils.addHttp(post.thumbnailUrl);
+  var image = post.thumbnailUrl || Settings.get("siteImage");
+  if (!!image) {
     DocHead.addMeta({property: "twitter:card", content: "summary_large_image"});
-    Telescope.SEO.setImage(image);
+    Telescope.SEO.setImage(Telescope.utils.addHttp(image));
   }
 
   // Set Twitter username
