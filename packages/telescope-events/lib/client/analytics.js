@@ -59,16 +59,18 @@ Events.analyticsInit = function() {
 
   // Google Analytics
   if (googleAnalyticsId = Settings.get("googleAnalyticsId")){
+      // GA4
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//www.googletagmanager.com/gtag/js?id=' + googleAnalyticsId ;
+      ( document.getElementsByTagName('head')[0] ).appendChild( s );
 
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
 
-    var cookieDomain = document.domain === "localhost" ? "none" : "auto";
-
-    window.ga('create', googleAnalyticsId, cookieDomain);
-
+      gtag('js', new Date());
+      gtag('config', googleAnalyticsId);
   }
 
   // trigger first request once analytics are initialized
@@ -78,12 +80,12 @@ Events.analyticsInit = function() {
 
 Events.analyticsRequest = function() {
 
-  // Google Analytics
-  if (typeof window.ga !== 'undefined'){
-    window.ga('send', 'pageview', {
-      'page': FlowRouter.current().path
-    });
-  }
+  // Google Analytics (GA4 sends pageviews automatically)
+  //if (typeof window.gtag !== 'undefined'){
+  //  window.ga('send', 'pageview', {
+  //    'page': FlowRouter.current().path
+  //  });
+  //}
 
   // Mixpanel
   if(typeof mixpanel !== 'undefined' && typeof mixpanel.people !== 'undefined'){
